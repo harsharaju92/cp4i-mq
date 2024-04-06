@@ -6,9 +6,14 @@ pipeline {
             steps {
                 sh "docker build -t testdemo  ."
                 sh "docker tag demoupdate depukr/mynginx:testdemo
-                sh "docker push depukr/mynginx:testdemo"
+                
 "
             }
         }
+        stage('tag the image'){
+            steps{
+                sh "docker tag demoupdate depukr/mynginx:testdemo"
+    }
+}
     }
 }
