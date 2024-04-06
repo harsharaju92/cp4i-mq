@@ -5,9 +5,6 @@ pipeline {
         stage('Hello') {
             steps {
                 sh "docker build -t testdemo  ."
-                
-                
-"
             }
         }
         stage('tag the image'){
